@@ -1,8 +1,5 @@
-// We are using node's native package 'path'
-// https://nodejs.org/api/path.html
 const path = require('path');
-
-const HtmlWebpackPlugin = require('html-webpack-plugin'); // Import our plugin 
+const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 
 // Constant with our paths
 const paths = {
@@ -42,6 +39,12 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          'file-loader',
+        ],
       },
     ],
   },
