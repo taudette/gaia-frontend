@@ -1,20 +1,10 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './styles/styles.scss';
 import configureStore from './store/configureStore';
+import Approuter from './routers/AppRouter';
 
 const store = configureStore();
 
-console.log(store.getState());
-
-export default class Hello extends Component {
-  render() {
-    return (
-      <div>
-        Hello
-      </div>
-    );
-  }
-}
-
-render(<Hello />, document.getElementById('app'));
+render(<Approuter />, document.getElementById('app'));
