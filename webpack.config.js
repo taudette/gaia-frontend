@@ -48,6 +48,10 @@ module.exports = (env) => {
       ],
     },
     devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
+    devServer: {
+      contentBase: path.join(__dirname, 'dist'),
+      historyApiFallback: true,
+    },
     // Enable importing JS files without specifying their's extenstion 
     //
     // So we can write:
