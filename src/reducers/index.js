@@ -1,4 +1,6 @@
 export default (state = {}, action) => {
-  defualt:
-    return state
+  switch (action.type) {
+    default:
+      return state
+  }
 }
