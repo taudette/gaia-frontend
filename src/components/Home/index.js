@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Home = () => (
-  <div>Home</div>
+export const Home = (props) => (
+  <div>{props.testData}</div>
 )
 
 export default Home

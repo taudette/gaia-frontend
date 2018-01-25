@@ -1,8 +1,11 @@
 import React from 'react';
+import HomeComponent from '../../components/Home'
 import '../../styles/components/_home.scss'
 
-const Home = () => (
-  <div>Home container</div>
+export const Home = () => (
+  <div>
+    <HomeComponent />
+  </div>
 )
 
 export default Home
