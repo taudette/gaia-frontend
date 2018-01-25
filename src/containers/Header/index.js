@@ -1,9 +1,9 @@
 import React from 'react';
-import '../../styles/components/_header.scss'
+import styles from '../../styles/components/_header.scss'
 
 const Header = () => (
   <header>
-    <h1>Header for react boiler</h1>
+    <h1 className={styles.text}>Header for react boiler</h1>
   </header>
 )
 

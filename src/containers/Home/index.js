@@ -4,7 +4,7 @@ import '../../styles/components/_home.scss'
 
 export const Home = () => (
   <div>
-    <HomeComponent />
+    <HomeComponent testData={'test data'} />
   </div>
 )
 

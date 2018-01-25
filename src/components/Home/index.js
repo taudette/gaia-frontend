@@ -1,7 +1,8 @@
 import React from 'react';
+import '../../styles/components/_home.scss'
 
 export const Home = (props) => (
-  <div>{props.testData}</div>
+  <div className="text">{props.testData}</div>
 )
 
 export default Home

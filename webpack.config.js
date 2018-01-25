@@ -1,6 +1,6 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin'); 
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // Constant with our paths
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
@@ -22,29 +22,53 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         template: path.join(paths.SRC, 'index.html'),
       }),
+      new ExtractTextPlugin('styles.bundle.css')
     ],
-  // Loaders configuration 
+    // Loaders configuration 
     // We are telling webpack to use "babel-loader" for .js and .jsx files
     module: {
       rules: [{
-          test: /\.(js|jsx)$/,
-          exclude: /node_modules/,
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader',
+        ],
+      }, {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
           use: [
-            'babel-loader',
-          ],
-        }, {
-          test: /\.scss$/,
+            {
+              loader: 'css-loader',
+              query: {
+                modules: true,
+                localIdentName: '[name]__[local]___[hash:base64:5]'
+              }
+            },
+            'postcss-loader'
+          ]
+        }),
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
           use: [
-            'style-loader',
-            'css-loader',
+            {
+              loader: 'css-loader',
+              query: {
+                modules: true,
+                sourceMap: true,
+                importLoaders: 2,
+                localIdentName: '[name]__[local]___[hash:base64:5]'
+              }
+            },
             'sass-loader'
           ]
-        }, {
-          test: /\.(png|jpg|gif|svg)$/,
-          use: [
-            'file-loader',
-          ]
-        },
+        }),
+      },
       ],
     },
     devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
@@ -53,12 +77,6 @@ module.exports = (env) => {
       historyApiFallback: true,
     },
     // Enable importing JS files without specifying their's extenstion 
-    //
-    // So we can write:
-    // import MyComponent from './my-component';
-    //
-    // Instead of:
-    // import MyComponent from './my-component.jsx';
     resolve: {
       extensions: ['.js', '.jsx'],
     },
