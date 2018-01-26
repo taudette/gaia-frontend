@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import configureStore from './store/configureStore';
 import Approuter from './routers/AppRouter';
 import Header from './containers/Header'
-import './styles/app.scss';
+import styles from './styles/app.scss';
 
 const store = configureStore();
 

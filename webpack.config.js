@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+//TODO: optimize for production
+
 // Constant with our paths
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
@@ -23,6 +25,7 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         template: path.join(paths.SRC, 'index.html'),
       }),
+      //move css out of js bundle
       new ExtractTextPlugin({filename: 'styles.bundle.css', allChunks: true})
     ],
     // Loaders configuration 
