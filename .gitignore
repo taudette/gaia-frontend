@@ -1,5 +1,3 @@
 node_modules/
-dist
+public/dist
 
-debug.log
-dist/app.bundle.js
