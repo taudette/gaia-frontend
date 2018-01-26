@@ -3,7 +3,7 @@ import styles from '../../styles/components/_header.scss'
 
 const Header = () => (
   <header>
-    <h1 className={styles.text}>Header for react boiler</h1>
+    <h1 className={styles.header}>Header for react boiler</h1>
   </header>
 )
 

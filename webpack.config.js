@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 // Constant with our paths
 const paths = {
   DIST: path.resolve(__dirname, 'dist'),
@@ -22,7 +23,7 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         template: path.join(paths.SRC, 'index.html'),
       }),
-      new ExtractTextPlugin('styles.bundle.css')
+      new ExtractTextPlugin({filename: 'styles.bundle.css', allChunks: true})
     ],
     // Loaders configuration 
     // We are telling webpack to use "babel-loader" for .js and .jsx files
