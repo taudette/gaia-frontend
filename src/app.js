@@ -7,7 +7,7 @@ import Header from './containers/Header'
 import styles from './styles/app.scss';
 
 const store = configureStore();
-
+console.log('app.js!!')
 const jsx = (
   <Provider store={store}>
     <div>
@@ -16,5 +16,5 @@ const jsx = (
     </div>
   </Provider>
 )
-
+console.log('test')
 render(jsx, document.getElementById('app'));

@@ -8,6 +8,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.9",
+    "dotenv": "^4.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.1",
@@ -23,12 +24,13 @@
     "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "webpack",
+    "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
+    "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
