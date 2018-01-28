@@ -5,7 +5,6 @@ import { fetchVideos } from '../../actions';
 import { connect } from 'react-redux';
 import '../../styles/components/_home.scss';
 
-
 class Home extends React.Component {
   constructor(props) {
     super(props)
