@@ -1,10 +1,13 @@
 import React from 'react';
-import HomeComponent from '../../components/Home'
+import HeroContainer from '../Hero'
+import VideosContainer from '../Videos/index';
 import '../../styles/components/_home.scss'
+
 
 export const Home = () => (
   <div>
-    <HomeComponent testData={'test data'} />
+    <HeroContainer />
+    <VideosContainer />
   </div>
 )
 

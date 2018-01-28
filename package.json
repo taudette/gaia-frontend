@@ -1,5 +1,5 @@
 {
-  "name": "react-boiler",
+  "name": "gaia-frontend",
   "version": "1.0.0",
   "devDependencies": {
     "babel-core": "^6.26.0",
