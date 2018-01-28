@@ -2,10 +2,11 @@ import { FETCHING_VIDEOS, FETCHING_VIDEOS_SUCCESS, FETCHING_VIDEOS_FAILURE } fro
 
 const initialState = { 
   videos: {},
-  videosFetched: false,
+  hasFetched: false,
   hero: {},
   isFetching: false,
-  error: false
+  error: false,
+  user: 'Tyler'
 }
 
 export default function reducer (state = initialState, action) {
@@ -21,6 +22,7 @@ export default function reducer (state = initialState, action) {
       return {
         ...state,
         isFetching: false,
+        hasFetched: true,
         videos: action.data.titles,
         hero: action.data.term
       }
