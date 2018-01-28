@@ -1,5 +1,4 @@
 import { FETCHING_VIDEOS, FETCHING_VIDEOS_SUCCESS, FETCHING_VIDEOS_FAILURE } from './actionTypes';
-import fetchJsonp from 'fetch-jsonp' 
 
 const url = 'https://d6api.gaia.com/videos/term/119931'
 const headers = { headers: { 'accept': 'application/json' } } 
@@ -35,9 +34,8 @@ export const fetchVideos = () => {
         }
         return resp.text()
       })
-      .then((resp) => resp)
+      .then((resp) => JSON.parse(resp))
       .then((data) => { 
-        console.log(data)
         dispatch(getVideosSuccess(data))
       })
       .catch((error) => {
@@ -45,3 +43,4 @@ export const fetchVideos = () => {
       })
   }
 }
+
