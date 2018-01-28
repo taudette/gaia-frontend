@@ -33,7 +33,7 @@ class Home extends React.Component {
       endIndex += 16
     } else {
       endIndex = listLength
-    } 
+    }
 
     if (this.state.index == listLength) {
       return null
@@ -41,9 +41,14 @@ class Home extends React.Component {
 
     this.setState({ index: endIndex })
     this.setState({ loading: false })
-  } 
+  }
 
-  render() {  
+  goToTop = (e) => {
+    e.preventDefault();
+		return window.scrollTo(0,0);
+  }
+
+  render() {
     //check if there are as many videos as initially requested and show first batch (16)
     let videoList = this.props.videos.length >= this.state.index ? this.props.videos.slice(0, this.state.index) : this.props.videos
 
@@ -61,7 +66,8 @@ class Home extends React.Component {
           <HeroComponent hero={this.props.hero} />
           <VideosComponent videos={videoList} loading={this.state.loading} />
           <button onClick={this.addVideos}>Load More</button>
-        </div>    
+          <button onClick={this.goToTop}>Top</button>
+        </div>
       )
     }
 
