@@ -5,12 +5,47 @@ import { fetchVideos } from '../../actions';
 import { connect } from 'react-redux';
 import '../../styles/components/_home.scss';
 
+
 class Home extends React.Component {
+  constructor(props) {
+    super(props)
+    //use component state to store videos to be displayed
+    this.state = {
+      index: 16
+    }
+  }
+
   componentDidMount() {
     this.props.fetchData()
   }
 
-  render() {   
+  addVideos = () => {
+    console.log('add')
+    //if possible add 16 videos to the screen
+    //if not just show the rest remaining
+    let endIndex = this.state.index
+    const listLength = this.props.videos.length
+
+    if (listLength >= this.state.index + 16) {
+      endIndex += 16
+    } else {
+      endIndex = listLength
+    } 
+
+    if (this.state.index == listLength) {
+      return null
+    }
+
+    this.setState({ index: endIndex })
+  } 
+
+  
+  
+
+  render() {  
+    //check if there are as many videos as initially requested and show first batch (16)
+    let videoList = this.props.videos.length >= this.state.index ? this.props.videos.slice(0, this.state.index) : this.props.videos
+
     if (this.props.error) {
       return <p>Sorry! Something went wrong</p>
     }
@@ -20,12 +55,11 @@ class Home extends React.Component {
     }
 
     if (this.props.hasFetched) {
-      const videoList = this.props.videos.slice(0, 10)
-
       return (
-        <div>
+        <div >
           <HeroComponent hero={this.props.hero} />
           <VideosComponent videos={videoList} />
+          <button onClick={this.addVideos}>Load More</button>
         </div>    
       )
     }
