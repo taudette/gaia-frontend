@@ -2,7 +2,10 @@ import React from 'react';
 import VideoComponent from '../Video'
 
 export const VideosComponent = (props) => {
-  console.log(props.videos)
+  
+  if (props.loading) {
+    return <p>Loading...</p>
+  }
   return (
     <div>
       {props.videos &&

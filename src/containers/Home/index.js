@@ -11,7 +11,8 @@ class Home extends React.Component {
     super(props)
     //use component state to store videos to be displayed
     this.state = {
-      index: 16
+      index: 16,
+      loading: false
     }
   }
 
@@ -19,8 +20,10 @@ class Home extends React.Component {
     this.props.fetchData()
   }
 
-  addVideos = () => {
-    console.log('add')
+  addVideos = (e) => {
+    e.preventDefault()
+    this.setState({ loading: true })
+
     //if possible add 16 videos to the screen
     //if not just show the rest remaining
     let endIndex = this.state.index
@@ -37,10 +40,8 @@ class Home extends React.Component {
     }
 
     this.setState({ index: endIndex })
+    this.setState({ loading: false })
   } 
-
-  
-  
 
   render() {  
     //check if there are as many videos as initially requested and show first batch (16)
@@ -58,7 +59,7 @@ class Home extends React.Component {
       return (
         <div >
           <HeroComponent hero={this.props.hero} />
-          <VideosComponent videos={videoList} />
+          <VideosComponent videos={videoList} loading={this.state.loading} />
           <button onClick={this.addVideos}>Load More</button>
         </div>    
       )
