@@ -12,7 +12,7 @@ export const getVideos = () => {
 export const getVideosSuccess = (data) => {
   return {
     type: FETCHING_VIDEOS_SUCCESS,
-    data
+    data: parseData(data)
   }
 }
 
@@ -42,6 +42,29 @@ export const fetchVideos = () => {
         dispatch(getVideosFailure)
       })
   }
+}
+
+const parseData = (data) => {
+
+  const hero = {
+    body: data.term && data.term.body || '',
+    name: data.term && data.term.name || '',
+    lgImage: data.term && data.term.termImages && data.term.termImages.hero && data.term.termImages.hero.hero_1125x414,
+    smImage: data.term && data.term.termImages && data.term.termImages.hero && data.term.termImages.hero.hero_750x276
+  }
+
+  const videos = data.titles.map((video) => {
+    return {
+      img: video.hero_image && video.hero_image.hero_320x200 || '',
+      title: video.title || '',
+      segment: video.site_segment && video.site_segment.name || '',
+      seasons: video.total_episodes || '',
+      episodes: video.total_seasons || '',
+      likes: video.fivestar && video.fivestar.up_count && video.fivestar.up_count.value || ''
+    }
+  })
+
+  return { videos, hero }
 }
 
 

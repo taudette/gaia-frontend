@@ -19,12 +19,13 @@ export default function reducer (state = initialState, action) {
         isFetching: true
       }
     case 'FETCHING_VIDEOS_SUCCESS':
+    console.log(action.data)
       return {
         ...state,
         isFetching: false,
         hasFetched: true,
-        videos: action.data.titles,
-        hero: action.data.term
+        videos: action.data.videos,
+        hero: action.data.hero
       }
     case 'FETCHING_VIDEOS_FAILURE':
       return {
