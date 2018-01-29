@@ -1,9 +1,36 @@
 @import '../base/_settings.scss';
 
+section {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+}
+
+.row {
+  width: 100%;
+}
+
 .logoContainer {
   width: 7rem;
+}
+
+.userContainer {
+  float: right;
+  text-align: right;
+
+  img {
+    width: 5%;
+    margin-left: 1rem;
+  }
+
+  span {
+    color: darkgrey;
+  }
 }
 
 .icon {
   background-image: url("../../../public/images/header-logo.svg");
 }
+
