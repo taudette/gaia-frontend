@@ -1,3 +1,26 @@
+@import '../base/_settings.scss';
+
 .tileContainer {
-  width: 30rem;
+  width: 100%;
 }
+
+.tile {
+  list-style: none;
+  height: 30rem;
+
+  a {
+    color: $dark-blue;
+    font-size: $font-size-small;
+  }
+
+  .title {
+    font-size: $font-size-medium;
+  }
+}
+
+//make padding even with boostrap col
+.textContainer {
+  padding-left: 15px;
+}
+
+

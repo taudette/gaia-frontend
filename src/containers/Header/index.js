@@ -6,7 +6,7 @@ import styles from '../../styles/components/_header.scss';
 import { Row, Col } from 'react-bootstrap';
 
 export const HeaderContainer = (props) => (
-  <header>
+  <header className={styles.header}>
     <Row className={styles.row}>
       <Col xs={6}>
         <div className={styles.logoContainer}>

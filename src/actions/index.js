@@ -57,8 +57,8 @@ const parseData = (data) => {
       img: video.hero_image && video.hero_image.hero_320x200 || '',
       title: video.title || '',
       segment: video.site_segment && video.site_segment.name || '',
-      seasons: video.total_episodes || '',
-      episodes: video.total_seasons || '',
+      seasons: video.total_seasons || '',
+      episodes: video.total_episodes || '',
       likes: video.fivestar && video.fivestar.up_count && video.fivestar.up_count.value || '',
       dislikes: video.fivestar && video.fivestar.down_count && video.fivestar.down_count.value || ''
     }
