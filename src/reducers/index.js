@@ -19,7 +19,6 @@ export default function reducer (state = initialState, action) {
         isFetching: true
       }
     case 'FETCHING_VIDEOS_SUCCESS':
-    console.log(action.data)
       return {
         ...state,
         isFetching: false,

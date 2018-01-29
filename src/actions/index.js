@@ -49,8 +49,7 @@ const parseData = (data) => {
   const hero = {
     body: data.term && data.term.body || '',
     name: data.term && data.term.name || '',
-    lgImage: data.term && data.term.termImages && data.term.termImages.hero && data.term.termImages.hero.hero_1125x414,
-    smImage: data.term && data.term.termImages && data.term.termImages.hero && data.term.termImages.hero.hero_750x276
+    lgImage: data.term && data.term.termImages && data.term.termImages.hero && data.term.termImages.hero.hero_1125x414
   }
 
   const videos = data.titles.map((video) => {
@@ -60,7 +59,8 @@ const parseData = (data) => {
       segment: video.site_segment && video.site_segment.name || '',
       seasons: video.total_episodes || '',
       episodes: video.total_seasons || '',
-      likes: video.fivestar && video.fivestar.up_count && video.fivestar.up_count.value || ''
+      likes: video.fivestar && video.fivestar.up_count && video.fivestar.up_count.value || '',
+      disLikes: video.fivestar && video.fivestar.down_count && video.fivestar.down_count.value || ''
     }
   })
 
