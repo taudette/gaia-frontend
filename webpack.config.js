@@ -42,7 +42,17 @@ module.exports = (env) => {
             }
           ]
         })
-      }]
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 25000,
+          },
+        },
+      },
+    ]
     },
     plugins: [
       CSSExtract,

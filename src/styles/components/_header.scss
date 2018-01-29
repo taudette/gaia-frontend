@@ -1,5 +1,9 @@
 @import '../base/_settings.scss';
 
-.header {
-  color: $blue;
+.logoContainer {
+  width: 7rem;
+}
+
+.icon {
+  background-image: url("../../../public/images/header-logo.svg");
 }

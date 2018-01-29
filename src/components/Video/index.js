@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../../styles/components/_video.scss'
 
 export const VideoComponent = (props) => {
-  console.log(props)
   return (
       <div>
         {/* only render video if image and title are avaiable, check the rest individually */}
