@@ -1,0 +1,42 @@
+@import '../base/_settings.scss';
+
+.buttonRow {
+  margin-bottom: 5rem;
+
+  .loadButton, .upButton {
+    background-color: $blue-grey;
+    color: white;
+  }
+  
+  .upButton {
+    margin-right: 7rem;
+  }
+
+  .loadButton {
+    width: 22rem;
+  }
+}
+
+
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+
+@media (max-width: 768px) {
+  .buttonRow {
+    div {
+      text-align: center;
+    }
+    
+    .upButton {
+      margin-right: 0;
+    }
+  }
+}

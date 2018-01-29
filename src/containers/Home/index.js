@@ -1,6 +1,7 @@
 import React from 'react';
-import HeroComponent from '../../components/Hero'
-import VideosComponent from '../../components/Videos/index';
+import HeroComponent from '../../components/Hero';
+import VideosComponent from '../../components/Videos';
+import LoadButtonsComponent from '../../components/LoadButtons';
 import { fetchVideos } from '../../actions';
 import { connect } from 'react-redux';
 import '../../styles/components/_home.scss';
@@ -11,12 +12,13 @@ class Home extends React.Component {
     //use component state to store videos to be displayed
     this.state = {
       index: 16,
-      loading: false
+      loading: false,
+      listLength: ''
     }
   }
 
   componentDidMount() {
-  //this.props.fetchData()
+   //this.props.fetchData()
   }
 
   addVideos = (e) => {
@@ -38,6 +40,7 @@ class Home extends React.Component {
       return null
     }
 
+    this.setState({ listLength: listLength })
     this.setState({ index: endIndex })
     this.setState({ loading: false })
   }
@@ -64,8 +67,7 @@ class Home extends React.Component {
         <div>
           <HeroComponent hero={this.props.hero} />
           <VideosComponent videos={videoList} loading={this.state.loading} />
-          <button onClick={this.addVideos}>Load More</button>
-          <button onClick={this.goToTop}>Top</button>
+          <LoadButtonsComponent addVideos={this.addVideos} goToTop={this.goToTop} endIndex={this.state.index} listLength={this.state.listLength} />
         </div>
       )
     }
