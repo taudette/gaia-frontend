@@ -11,7 +11,7 @@ export const VideosComponent = (props) => {
       {props.videos &&
         <ul>
           {props.videos.map((video, index) => {
-            return <VideoComponent data={video} key={index} />
+            return <VideoComponent {...video} key={index} />
           })}
         </ul>
       }

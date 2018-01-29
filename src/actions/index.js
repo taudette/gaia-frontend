@@ -60,7 +60,7 @@ const parseData = (data) => {
       seasons: video.total_episodes || '',
       episodes: video.total_seasons || '',
       likes: video.fivestar && video.fivestar.up_count && video.fivestar.up_count.value || '',
-      disLikes: video.fivestar && video.fivestar.down_count && video.fivestar.down_count.value || ''
+      dislikes: video.fivestar && video.fivestar.down_count && video.fivestar.down_count.value || ''
     }
   })
 
