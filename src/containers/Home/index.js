@@ -61,7 +61,7 @@ class Home extends React.Component {
 
     if (this.props.hasFetched) {
       return (
-        <div >
+        <div>
           <HeroComponent hero={this.props.hero} />
           <VideosComponent videos={videoList} loading={this.state.loading} />
           <button onClick={this.addVideos}>Load More</button>

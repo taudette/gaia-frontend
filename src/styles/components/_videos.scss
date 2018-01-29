@@ -1,0 +1,13 @@
+.videoList {
+  padding-left: 0px;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+//remove margins for small screens
+@media (max-width: 768px) {
+  .videoList {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
