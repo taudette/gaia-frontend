@@ -6,7 +6,7 @@ import styles from '../../styles/components/_header.scss';
 import { Row, Col } from 'react-bootstrap';
 
 export const HeaderContainer = (props) => (
-  <section>
+  <header>
     <Row className={styles.row}>
       <Col xs={6}>
         <div className={styles.logoContainer}>
@@ -20,7 +20,7 @@ export const HeaderContainer = (props) => (
         </div>
       </Col>
     </Row>
-  </section>
+  </header>
 )
 
 const mapStateToProps = (state) => {

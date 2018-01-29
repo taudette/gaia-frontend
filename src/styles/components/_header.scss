@@ -1,6 +1,6 @@
 @import '../base/_settings.scss';
 
-section {
+header {
   padding-left: 4rem;
   padding-right: 4rem;
   display: flex;
@@ -21,7 +21,7 @@ section {
   text-align: right;
 
   img {
-    width: 5%;
+    width: 2rem;
     margin-left: 1rem;
   }
 

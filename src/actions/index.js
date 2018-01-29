@@ -49,7 +49,7 @@ const parseData = (data) => {
   const hero = {
     body: data.term && data.term.body || '',
     name: data.term && data.term.name || '',
-    lgImage: data.term && data.term.termImages && data.term.termImages.hero && data.term.termImages.hero.hero_1125x414
+    lgImage: data.term && data.term.termImages && data.term.termImages.hero && data.term.termImages.hero.hero_1440x300
   }
 
   const videos = data.titles.map((video) => {
