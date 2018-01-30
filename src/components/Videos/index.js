@@ -1,11 +1,12 @@
 import React from 'react';
 import VideoComponent from '../Video';
+import Loader from '../Loader';
 import { DropdownButton, MenuItem, Row, Col } from 'react-bootstrap';
 import styles from '../../styles/components/_videos.scss';
 
 export const VideosComponent = (props) => {
   if (props.loading) {
-    return <p>Loading...</p>
+    return <Loader />
   }
 
   return (

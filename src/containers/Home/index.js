@@ -2,6 +2,7 @@ import React from 'react';
 import HeroComponent from '../../components/Hero';
 import VideosComponent from '../../components/Videos';
 import LoadButtonsComponent from '../../components/LoadButtons';
+import Loader from '../../components/Loader';
 import { fetchVideos } from '../../actions';
 import { connect } from 'react-redux';
 import '../../styles/components/_home.scss';
@@ -60,7 +61,7 @@ export class HomeContainer extends React.Component {
     }
 
     if (this.props.isFetching) {
-      return <p>Loading...</p>
+      return <Loader />
     }
 
     if (this.props.hasFetched) {
@@ -68,7 +69,7 @@ export class HomeContainer extends React.Component {
         <div>
           <HeroComponent hero={this.props.hero} />
           <VideosComponent videos={videoList} loading={this.state.loading} />
-          <LoadButtonsComponent addVideos={this.addVideos} goToTop={this.goToTop} endIndex={this.state.index} listLength={this.state.listLength} />
+          <LoadButtonsComponent addVideos={this.addVideos} goToTop={this.goToTop} endIndex={this.state.index} listLength={this.state.listLength} fetching={this.props.isFetching} />
         </div>
       )
     }

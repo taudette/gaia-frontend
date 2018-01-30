@@ -9,6 +9,6 @@ test('should render LoadButtonsComponent without props', () => {
 })
 
 test('should render LoadButtonsComponent with props', () => {
-  const wrapper = shallow(<LoadButtonsComponent addVideos={data.addVideos} goToTop={data.goToTop} endIndex={data.index} listLength={data.listLength} />)
+  const wrapper = shallow(<LoadButtonsComponent addVideos={data.addVideos} goToTop={data.goToTop} endIndex={data.index} listLength={data.listLength} fetching={data.loading} />)
   expect(wrapper).toMatchSnapshot();
 })

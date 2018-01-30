@@ -3,6 +3,9 @@ import styles from '../../styles/components/_loadButtons.scss'
 import { Row, Col } from 'react-bootstrap'
 
 const LoadButtonsComponent = (props) => {
+  if (props.fetching) {
+    return null
+  }
   return (
     <Row className={styles.buttonRow}>
       {/* don't show load more button if no more to load*/}
