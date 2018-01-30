@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "cors": "^2.8.4",
     "express": "^4.16.2",
     "file-loader": "^1.1.6",
     "react": "^16.2.0",

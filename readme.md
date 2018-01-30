@@ -9,11 +9,11 @@ Basic react boilerplate inspired by [this tutorial](https://www.udemy.com/react-
 - git clone https://github.com/taudette/boiler.git
 - cd boiler
 - npm install
-- npm run dev-server (runs development server at at http://localhost:8081)
+- npm run dev-server (runs development server at at http://localhost:8080)
 
 ## Production build
 - npm run build:prod
-- npm start (runs app at http://localhost:3000)
+- npm start (runs app at http://localhost:8080)
 
 ## Testing
 - npm test
