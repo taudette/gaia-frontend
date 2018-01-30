@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<Uncontrolled(Navbar)
+  bsStyle="default"
+  className="nav"
+  collapseOnSelect={true}
+>
+  <NavbarToggle />
+  <NavbarCollapse>
+    <Nav
+      bsClass="nav"
+      justified={false}
+      pullLeft={false}
+      pullRight={false}
+      stacked={false}
+    >
+      <NavItem
+        active={false}
+        disabled={false}
+      >
+        MY GAIA
+      </NavItem>
+      <NavItem
+        active={false}
+        disabled={false}
+      >
+        YOGA
+      </NavItem>
+      <NavItem
+        active={false}
+        disabled={false}
+      >
+        SEEKING TRUTH
+      </NavItem>
+      <NavItem
+        active={false}
+        disabled={false}
+      >
+        TRANSFORMATION
+      </NavItem>
+      <NavItem
+        active={false}
+        disabled={false}
+      >
+        FILMS & DOCS
+      </NavItem>
+      <NavItem
+        active={false}
+        disabled={false}
+      >
+        CENTERS
+      </NavItem>
+    </Nav>
+    <NavbarForm
+      componentClass="div"
+      pullLeft={false}
+      pullRight={true}
+    >
+      <FormGroup
+        bsClass="form-group"
+      >
+        <FormControl
+          bsClass="form-control"
+          componentClass="input"
+          type="text"
+        />
+      </FormGroup>
+       
+      <Button
+        active={false}
+        block={false}
+        bsClass="btn"
+        bsStyle="default"
+        className="nav"
+        disabled={false}
+        type="submit"
+      >
+        <img
+          alt="search logo"
+          src="test-file-stub"
+        />
+      </Button>
+    </NavbarForm>
+  </NavbarCollapse>
+</Uncontrolled(Navbar)>
+`;

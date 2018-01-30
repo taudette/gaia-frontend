@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`should render test data from props 1`] = `
-<div>
-  test-data
-</div>
-`;
-
-exports[`should render with no props 1`] = `<div />`;

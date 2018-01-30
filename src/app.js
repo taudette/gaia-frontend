@@ -9,7 +9,7 @@ import styles from './styles/app.scss';
 
 const store = configureStore();
 
-const jsx = (
+export const jsx = (
   <Provider store={store}>
     <div>
       <Header />

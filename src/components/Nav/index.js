@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav, NavItem, FormGroup, FormControl, Button } from 'react-bootstrap';
-import searchLogo from '../../../public/images/search.svg'
-import styles from '../../styles/components/_nav.scss'
+import searchLogo from '../../../public/images/search.svg';
+import styles from '../../styles/components/_nav.scss';
 
 export const NavComponent = () => (
   <Navbar className={styles.nav} collapseOnSelect>

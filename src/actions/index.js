@@ -52,18 +52,19 @@ const parseData = (data) => {
     lgImage: data.term && data.term.termImages && data.term.termImages.hero && data.term.termImages.hero.hero_1440x300
   }
 
-  const videos = data.titles.map((video) => {
-    return {
-      img: video.hero_image && video.hero_image.hero_320x200 || '',
-      title: video.title || '',
-      segment: video.site_segment && video.site_segment.name || '',
-      seasons: video.total_seasons || '',
-      episodes: video.total_episodes || '',
-      likes: video.fivestar && video.fivestar.up_count && video.fivestar.up_count.value || '',
-      dislikes: video.fivestar && video.fivestar.down_count && video.fivestar.down_count.value || ''
-    }
-  })
 
+    const videos = data.titles.map((video) => {
+      return {
+        img: video.hero_image && video.hero_image.hero_320x200 || '',
+        title: video.title || '',
+        segment: video.site_segment && video.site_segment.name || '',
+        seasons: video.total_seasons || '',
+        episodes: video.total_episodes || '',
+        likes: video.fivestar && video.fivestar.up_count && video.fivestar.up_count.value || '',
+        dislikes: video.fivestar && video.fivestar.down_count && video.fivestar.down_count.value || ''
+      }
+    })
+  
   return { videos, hero }
 }
 
