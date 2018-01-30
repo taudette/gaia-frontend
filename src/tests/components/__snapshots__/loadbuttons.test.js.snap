@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LoadButtonsComponent with props 1`] = `
+<Col
+  bsClass="col"
+  componentClass="div"
+  lg={3}
+  md={4}
+  sm={6}
+  xs={12}
+>
+  <li
+    className="tile"
+  />
+</Col>
+`;
+
+exports[`should render LoadButtonsComponent without props 1`] = `
+<Col
+  bsClass="col"
+  componentClass="div"
+  lg={3}
+  md={4}
+  sm={6}
+  xs={12}
+>
+  <li
+    className="tile"
+  />
+</Col>
+`;

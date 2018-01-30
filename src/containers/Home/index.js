@@ -52,11 +52,8 @@ export class HomeContainer extends React.Component {
 
   render() {
     //check if there are as many videos as initially requested and show first batch (16)
-
     let videoList = this.props.videos && this.props.videos.length >= this.state.index 
       ? this.props.videos.slice(0, this.state.index) : this.props.videos
-  
-    
 
     if (this.props.error) {
       return <p>Sorry! Something went wrong</p>
