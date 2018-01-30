@@ -1,7 +1,7 @@
 import { FETCHING_VIDEOS, FETCHING_VIDEOS_SUCCESS, FETCHING_VIDEOS_FAILURE } from '../actions/actionTypes'
 
 const initialState = { 
-  videos: {},
+  videos: [],
   hasFetched: false,
   hero: {},
   isFetching: false,

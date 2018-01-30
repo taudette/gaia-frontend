@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render video 1`] = `
+<Col
+  bsClass="col"
+  componentClass="div"
+  lg={3}
+  md={4}
+  sm={6}
+  xs={12}
+>
+  <li
+    className="tile"
+  >
+    <div
+      className="tileContainer"
+    >
+      <img
+        alt="video-image"
+        src="https://img.gtvcdn.com/cdn/farfuture/29uIix8RhExtaI54apLJdD1J62mat_Cxx6mMQNxxUek/mtime%3A1496214668/sites/default/files/imagecache/hero_320x200/img_16x9_landsacpe_title/142666_wt_s26e5_the-mystery-of-comet-shoemaker-levy-9_16x9.jpg"
+      />
+      <Row
+        bsClass="row"
+        componentClass="div"
+      >
+        <Col
+          bsClass="col"
+          componentClass="div"
+          xs={5}
+        >
+          <a
+            className="segment"
+            href="javascript:void(0);"
+          >
+            Seeking Truth
+          </a>
+        </Col>
+        <Col
+          bsClass="col"
+          className="text-right"
+          componentClass="div"
+          xs={7}
+        >
+          <a
+            href="javascript:void(0);"
+          >
+            likes: 
+            888
+             
+          </a>
+          <a
+            href="javascript:void(0);"
+          >
+            dislikes: 
+            48
+          </a>
+        </Col>
+      </Row>
+      <div
+        className="textContainer"
+      >
+        <Row
+          bsClass="row"
+          componentClass="div"
+        >
+          <a
+            className="title"
+            href="javascript:void(0);"
+          >
+            [#220] The Mystery of Comet Shoemaker-Levy 9
+          </a>
+        </Row>
+        <Row
+          bsClass="row"
+          componentClass="div"
+        />
+      </div>
+    </div>
+  </li>
+</Col>
+`;
+
+exports[`should render video component without video 1`] = `
+<Col
+  bsClass="col"
+  componentClass="div"
+  lg={3}
+  md={4}
+  sm={6}
+  xs={12}
+>
+  <li
+    className="tile"
+  />
+</Col>
+`;

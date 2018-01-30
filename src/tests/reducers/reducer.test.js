@@ -8,7 +8,7 @@ test('should set default state', () => {
     "hero": {}, 
     "isFetching": false, 
     "user": "Tyler", 
-    "videos": {}
+    "videos": []
   });
 });
 

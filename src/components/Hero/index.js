@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../../styles/components/_hero.scss'
 
-const HeroComponent = (props) => {
+export const HeroComponent = (props) => {
   return (
     <section >
       <div className={styles.heroContainer}>

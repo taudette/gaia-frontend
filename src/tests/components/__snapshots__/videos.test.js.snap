@@ -1,5 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render videos 1`] = `
+<section>
+  <div
+    className="videoList"
+  >
+    <Row
+      bsClass="row"
+      componentClass="div"
+    >
+      <Col
+        bsClass="col"
+        className="buttonCol hidden-xs"
+        componentClass="div"
+        lg={3}
+        lgOffset={9}
+        md={4}
+        mdOffset={8}
+        sm={6}
+        smOffset={6}
+        xs={12}
+      >
+        <p>
+          SORT BY
+        </p>
+        <DropdownButton
+          bsStyle="default"
+          className="dropDownButton"
+          id="sort videos"
+          title="Choose an Option"
+        >
+          <MenuItem
+            bsClass="dropdown"
+            disabled={false}
+            divider={false}
+            eventKey="1"
+            header={false}
+          >
+            Name
+          </MenuItem>
+          <MenuItem
+            bsClass="dropdown"
+            disabled={false}
+            divider={false}
+            eventKey="2"
+            header={false}
+          >
+            Date
+          </MenuItem>
+          <MenuItem
+            bsClass="dropdown"
+            disabled={false}
+            divider={false}
+            eventKey="2"
+            header={false}
+          >
+            Category
+          </MenuItem>
+        </DropdownButton>
+      </Col>
+    </Row>
+    <p>
+      We suggest you start here →
+    </p>
+    <ul>
+      <VideoComponent
+        dislikes={48}
+        episodes=""
+        img="https://img.gtvcdn.com/cdn/farfuture/29uIix8RhExtaI54apLJdD1J62mat_Cxx6mMQNxxUek/mtime%3A1496214668/sites/default/files/imagecache/hero_320x200/img_16x9_landsacpe_title/142666_wt_s26e5_the-mystery-of-comet-shoemaker-levy-9_16x9.jpg"
+        key="0"
+        likes={888}
+        seasons=""
+        segment="Seeking Truth"
+        title="[#220] The Mystery of Comet Shoemaker-Levy 9"
+      />
+      <VideoComponent
+        dislikes={46}
+        episodes=""
+        img="https://img.gtvcdn.com/cdn/farfuture/q-Dlko7q-kZVT6UZhsznASzrDxjOgjoDVBUg2HmpvPg/mtime%3A1486967204/sites/default/files/imagecache/hero_320x200/img_16x9_landsacpe_title/137021_wt_s24e14_revealing-the-cosmic-quantum-medium_part-2_16x9_0.jpg"
+        key="1"
+        likes={576}
+        seasons=""
+        segment="Seeking Truth"
+        title="[#206] Revealing the Cosmic Quantum Medium Part 2"
+      />
+      <VideoComponent
+        dislikes={40}
+        episodes=""
+        img="https://img.gtvcdn.com/cdn/farfuture/gpoPETTfRHyBACdDoyH7IP_Q5M29ZtBk6KssnJEZr8U/mtime%3A1489392081/sites/default/files/imagecache/hero_320x200/img_16x9_landsacpe_title/138171_wt_s24e16_sacred-geometry-of-the-squared-circle_16x9_0.jpg"
+        key="2"
+        likes={718}
+        seasons=""
+        segment="Seeking Truth"
+        title="[#208] Sacred Geometry of the Squared Circle"
+      />
+      <VideoComponent
+        dislikes={94}
+        episodes=""
+        img="https://img.gtvcdn.com/cdn/farfuture/aWjV45VC818oeNRpQ0WpDtOyUhHzd-QttMgyb2Su2QA/mtime%3A1492622348/sites/default/files/imagecache/hero_320x200/img_16x9_landsacpe_title/140516_om_s8e19_alice-bailey-and-the-circle-of-initiates_w_klaire-roy_16x9.jpg"
+        key="3"
+        likes={522}
+        seasons=""
+        segment="Seeking Truth"
+        title="Alice Bailey and the Circle of Initiates with Klaire Roy"
+      />
+    </ul>
+  </div>
+</section>
+`;
+
 exports[`should render videos component without videos 1`] = `
 <section>
   <div
