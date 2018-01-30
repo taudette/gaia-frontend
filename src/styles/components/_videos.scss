@@ -1,7 +1,31 @@
+@import '../base/_settings.scss';
+
 .videoList {
-  padding-left: 0px;
   margin-left: 4rem;
   margin-right: 4rem;
+
+  ul {
+    overflow: hidden;
+    clear: both;
+    padding-left: 0px;
+  }
+
+  p {
+    color: $gaia-blue;
+    margin-right: 15px;
+    margin-left: 15px;
+    font-size: $font-size-small;
+  }
+}
+
+.dropDownButton {
+  border-radius: 0;
+  color: $grey;
+  margin-right: 15px;
+}
+
+.buttonCol {
+  text-align: right;
 }
 
 //remove margins for small screens
@@ -10,4 +34,8 @@
     margin-left: 0;
     margin-right: 0;
   }
+  .buttonCol {
+    text-align: center;
+  }
+  
 }
