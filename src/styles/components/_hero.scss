@@ -1,12 +1,12 @@
-img {
-  width: 100%;
-}
-
 .heroContainer {
   position: relative;
   text-align: center;
   color: white;
   margin-bottom: 2rem;
+
+  img {
+    width: 100%;
+  }
 }
 
 .text {
