@@ -6,7 +6,7 @@ import { fetchVideos } from '../../actions';
 import { connect } from 'react-redux';
 import '../../styles/components/_home.scss';
 
-class Home extends React.Component {
+export class HomeContainer extends React.Component {
   constructor(props) {
     super(props)
     //use component state to store videos to be displayed
@@ -18,7 +18,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-   this.props.fetchData()
+   this.props.fetchData && this.props.fetchData() || null
   }
 
   addVideos = (e) => {
@@ -52,7 +52,10 @@ class Home extends React.Component {
 
   render() {
     //check if there are as many videos as initially requested and show first batch (16)
-    let videoList = this.props.videos.length >= this.state.index ? this.props.videos.slice(0, this.state.index) : this.props.videos
+    if (this.props.videos) {
+      let videoList = this.props.videos.length >= this.state.index ? this.props.videos.slice(0, this.state.index) : this.props.videos
+    }
+    
 
     if (this.props.error) {
       return <p>Sorry! Something went wrong</p>
@@ -91,4 +94,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer)

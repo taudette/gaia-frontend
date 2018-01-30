@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render videos component without videos 1`] = `
+<section>
+  <div
+    className="videoList"
+  >
+    <Row
+      bsClass="row"
+      componentClass="div"
+    >
+      <Col
+        bsClass="col"
+        className="buttonCol hidden-xs"
+        componentClass="div"
+        lg={3}
+        lgOffset={9}
+        md={4}
+        mdOffset={8}
+        sm={6}
+        smOffset={6}
+        xs={12}
+      >
+        <p>
+          SORT BY
+        </p>
+        <DropdownButton
+          bsStyle="default"
+          className="dropDownButton"
+          id="sort videos"
+          title="Choose an Option"
+        >
+          <MenuItem
+            bsClass="dropdown"
+            disabled={false}
+            divider={false}
+            eventKey="1"
+            header={false}
+          >
+            Name
+          </MenuItem>
+          <MenuItem
+            bsClass="dropdown"
+            disabled={false}
+            divider={false}
+            eventKey="2"
+            header={false}
+          >
+            Date
+          </MenuItem>
+          <MenuItem
+            bsClass="dropdown"
+            disabled={false}
+            divider={false}
+            eventKey="2"
+            header={false}
+          >
+            Category
+          </MenuItem>
+        </DropdownButton>
+      </Col>
+    </Row>
+    <p>
+      We suggest you start here →
+    </p>
+    <ul />
+  </div>
+</section>
+`;

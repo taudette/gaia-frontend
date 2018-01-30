@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<header
+  className="header"
+>
+  <Row
+    bsClass="row"
+    className="row"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      componentClass="div"
+      xs={6}
+    >
+      <div
+        className="logoContainer"
+      >
+        <img
+          alt="Gaia, Inc."
+          src="test-file-stub"
+        />
+      </div>
+    </Col>
+    <Col
+      bsClass="col"
+      componentClass="div"
+      xs={6}
+    >
+      <div
+        className="userContainer"
+      >
+        <span>
+          <small />
+        </span>
+        <img
+          alt="user logo"
+          src="test-file-stub"
+        />
+      </div>
+    </Col>
+  </Row>
+</header>
+`;
